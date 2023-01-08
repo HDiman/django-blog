@@ -14,16 +14,16 @@ from borb.pdf import PDF
 
 def main():
     # create Document
-    doc = Document()
+    doc: Document = Document()
 
     # create Page
-    page= Page()
+    page: Page = Page()
 
     # add Page to Document
     doc.add_page(page)
 
     # set a PageLayout
-    layout = SingleColumnLayout(page)
+    layout: PageLayout = SingleColumnLayout(page)
 
     # add a Paragraph
     layout.add(Paragraph("Hello World!"))
