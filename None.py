@@ -1,38 +1,44 @@
-#!chapter_002/src/snippet_004.py
-from borb.pdf import Document
-from borb.pdf import Page
-from borb.pdf import PageLayout
-from borb.pdf import SingleColumnLayout
-from borb.pdf import Paragraph
-from borb.pdf import Document
-from borb.pdf import Page
-from borb.pdf import PageLayout
-from borb.pdf import SingleColumnLayout
-from borb.pdf import Paragraph
-from borb.pdf import PDF
+# #!chapter_002/src/snippet_004.py
+# from borb.pdf import Document
+# from borb.pdf import Page
+# from borb.pdf import PageLayout
+# from borb.pdf import SingleColumnLayout
+# from borb.pdf import Paragraph
+# from borb.pdf import Document
+# from borb.pdf import Page
+# from borb.pdf import PageLayout
+# from borb.pdf import SingleColumnLayout
+# from borb.pdf import Paragraph
+# from borb.pdf import PDF
+#
+#
+# def main():
+#     # create Document
+#     doc: Document = Document()
+#
+#     # create Page
+#     page: Page = Page()
+#
+#     # add Page to Document
+#     doc.add_page(page)
+#
+#     # set a PageLayout
+#     layout: PageLayout = SingleColumnLayout(page)
+#
+#     # add a Paragraph
+#     layout.add(Paragraph("Hello World!"))
+#
+#
+#     # store
+#     with open("output.pdf", "wb") as pdf_file_handle:
+#         PDF.dumps(pdf_file_handle, doc)
+#
+#
+# if __name__ == "__main__":
+#     main()
 
+def indent_right(s: str, width: int) -> str:
+    return " " * (max(0, width - len(s))) + s
 
-def main():
-    # create Document
-    doc: Document = Document()
-
-    # create Page
-    page: Page = Page()
-
-    # add Page to Document
-    doc.add_page(page)
-
-    # set a PageLayout
-    layout: PageLayout = SingleColumnLayout(page)
-
-    # add a Paragraph
-    layout.add(Paragraph("Hello World!"))
-
-
-    # store
-    with open("output.pdf", "wb") as pdf_file_handle:
-        PDF.dumps(pdf_file_handle, doc)
-
-
-if __name__ == "__main__":
-    main()
+sententce = indent_right('hello', 10)
+print(sententce)
